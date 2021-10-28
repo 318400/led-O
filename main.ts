@@ -1,3 +1,17 @@
+input.onButtonPressed(Button.A, function () {
+    basic.clearScreen()
+    for (let index = 0; index < 16; index++) {
+        a += 1
+        doSomething(a - 1, false)
+        if (a >= 16) {
+            a = 1
+        }
+        doSomething(a, true)
+        basic.pause(100)
+    }
+    a = 0
+    basic.clearScreen()
+})
 function doSomething (num: number, bool: boolean) {
     if (num < 6) {
         x = num - 1
@@ -21,7 +35,9 @@ function doSomething (num: number, bool: boolean) {
 let y = 0
 let x = 0
 let a = 0
-basic.forever(function () {
+basic.clearScreen()
+a = 0
+for (let index = 0; index < 16; index++) {
     a += 1
     doSomething(a - 1, false)
     if (a >= 16) {
@@ -29,4 +45,6 @@ basic.forever(function () {
     }
     doSomething(a, true)
     basic.pause(100)
-})
+}
+a = 0
+basic.clearScreen()
