@@ -44,17 +44,6 @@ function doSomething (num: number, bool: boolean) {
         led.unplot(x, y)
     }
 }
-input.onButtonPressed(Button.B, function () {
-    for (let index = 0; index < 16; index++) {
-        b += 0 - 1
-        doSomething(b + 1, false)
-        if (b >= 16) {
-            b = 15
-        }
-        doSomething(b, true)
-        basic.pause(100)
-    }
-})
 let y = 0
 let x = 0
 let b = 0
